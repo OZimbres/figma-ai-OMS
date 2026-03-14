@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Background -->
+  <rect width="1280" height="800" fill="#F3F4F6"/>
+
+  <!-- Sidebar -->
+  <rect width="220" height="800" fill="#1F2937"/>
+  <text x="20" y="40" fill="white" font-size="16" font-weight="bold">🍽  RestaurantOS</text>
+  <line x1="0" y1="55" x2="220" y2="55" stroke="#374151" stroke-width="1"/>
+  <text x="16" y="80" fill="#9CA3AF" font-size="11">GESTÃO</text>
+  <rect x="8" y="88" width="204" height="34" rx="6" fill="#3B82F6"/>
+  <text x="20" y="110" fill="white" font-size="14">🍽  Produtos</text>
+  <text x="20" y="138" fill="#D1D5DB" font-size="14">👥  Clientes</text>
+  <text x="20" y="166" fill="#D1D5DB" font-size="14">💰  Cobranças</text>
+  <text x="20" y="790" fill="#9CA3AF" font-size="13">👤  Admin User</text>
+
+  <!-- Main Content -->
+  <text x="250" y="52" fill="#111827" font-size="22" font-weight="bold">Products</text>
+  <rect x="1080" y="26" width="140" height="34" rx="6" fill="#3B82F6"/>
+  <text x="1150" y="49" fill="white" font-size="13" font-weight="bold" text-anchor="middle">+ Add Product</text>
+
+  <!-- Table header -->
+  <rect x="240" y="72" width="1020" height="36" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="268" y="96" fill="#374151" font-size="12" font-weight="bold"></text>
+  <text x="310" y="96" fill="#374151" font-size="12" font-weight="bold">Name</text>
+  <text x="510" y="96" fill="#374151" font-size="12" font-weight="bold">Category</text>
+  <text x="660" y="96" fill="#374151" font-size="12" font-weight="bold">Price</text>
+  <text x="760" y="96" fill="#374151" font-size="12" font-weight="bold">Prep (min)</text>
+  <text x="880" y="96" fill="#374151" font-size="12" font-weight="bold">Available</text>
+  <text x="1000" y="96" fill="#374151" font-size="12" font-weight="bold"></text>
+
+  <!-- Rows -->
+  <!-- Row 1 -->
+  <line x1="240" y1="108" x2="1260" y2="108" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="268" y="132" fill="#374151" font-size="16">🍕</text>
+  <text x="310" y="132" fill="#111827" font-size="13">Pizza Margherita</text>
+  <text x="510" y="132" fill="#6B7280" font-size="13">Main Dishes</text>
+  <text x="660" y="132" fill="#111827" font-size="13">$18.00</text>
+  <text x="780" y="132" fill="#111827" font-size="13">15</text>
+  <text x="880" y="132" fill="#10B981" font-size="13">✅ Yes</text>
+  <rect x="1000" y="118" width="50" height="24" rx="4" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="1025" y="135" fill="#374151" font-size="12" text-anchor="middle">Edit</text>
+
+  <!-- Row 2 -->
+  <line x1="240" y1="146" x2="1260" y2="146" stroke="#F3F4F6" stroke-width="1"/>
+  <text x="268" y="170" fill="#374151" font-size="16">🍔</text>
+  <text x="310" y="170" fill="#111827" font-size="13">Hambúrguer Classic</text>
+  <text x="510" y="170" fill="#6B7280" font-size="13">Main Dishes</text>
+  <text x="660" y="170" fill="#111827" font-size="13">$15.00</text>
+  <text x="780" y="170" fill="#111827" font-size="13">12</text>
+  <text x="880" y="170" fill="#10B981" font-size="13">✅ Yes</text>
+  <rect x="1000" y="156" width="50" height="24" rx="4" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="1025" y="173" fill="#374151" font-size="12" text-anchor="middle">Edit</text>
+
+  <!-- Row 3 -->
+  <line x1="240" y1="184" x2="1260" y2="184" stroke="#F3F4F6" stroke-width="1"/>
+  <text x="268" y="208" fill="#374151" font-size="16">🥗</text>
+  <text x="310" y="208" fill="#111827" font-size="13">Salada César</text>
+  <text x="510" y="208" fill="#6B7280" font-size="13">Starters</text>
+  <text x="660" y="208" fill="#111827" font-size="13">$12.00</text>
+  <text x="780" y="208" fill="#111827" font-size="13">8</text>
+  <text x="880" y="208" fill="#10B981" font-size="13">✅ Yes</text>
+  <rect x="1000" y="194" width="50" height="24" rx="4" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="1025" y="211" fill="#374151" font-size="12" text-anchor="middle">Edit</text>
+
+  <!-- Row 4 -->
+  <line x1="240" y1="222" x2="1260" y2="222" stroke="#F3F4F6" stroke-width="1"/>
+  <text x="268" y="246" fill="#374151" font-size="16">🥤</text>
+  <text x="310" y="246" fill="#111827" font-size="13">Suco de Laranja</text>
+  <text x="510" y="246" fill="#6B7280" font-size="13">Drinks</text>
+  <text x="660" y="246" fill="#111827" font-size="13">$3.00</text>
+  <text x="780" y="246" fill="#111827" font-size="13">2</text>
+  <text x="880" y="246" fill="#10B981" font-size="13">✅ Yes</text>
+  <rect x="1000" y="232" width="50" height="24" rx="4" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="1025" y="249" fill="#374151" font-size="12" text-anchor="middle">Edit</text>
+
+  <!-- Row 5 -->
+  <line x1="240" y1="260" x2="1260" y2="260" stroke="#F3F4F6" stroke-width="1"/>
+  <text x="268" y="284" fill="#374151" font-size="16">☕</text>
+  <text x="310" y="284" fill="#111827" font-size="13">Café Espresso</text>
+  <text x="510" y="284" fill="#6B7280" font-size="13">Drinks</text>
+  <text x="660" y="284" fill="#111827" font-size="13">$4.50</text>
+  <text x="780" y="284" fill="#111827" font-size="13">3</text>
+  <text x="880" y="284" fill="#10B981" font-size="13">✅ Yes</text>
+  <rect x="1000" y="270" width="50" height="24" rx="4" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="1025" y="287" fill="#374151" font-size="12" text-anchor="middle">Edit</text>
+
+  <!-- Row 6 -->
+  <line x1="240" y1="298" x2="1260" y2="298" stroke="#F3F4F6" stroke-width="1"/>
+  <text x="268" y="322" fill="#374151" font-size="16">🍰</text>
+  <text x="310" y="322" fill="#111827" font-size="13">Petit Gateau</text>
+  <text x="510" y="322" fill="#6B7280" font-size="13">Desserts</text>
+  <text x="660" y="322" fill="#111827" font-size="13">$9.00</text>
+  <text x="780" y="322" fill="#111827" font-size="13">10</text>
+  <text x="880" y="322" fill="#10B981" font-size="13">✅ Yes</text>
+  <rect x="1000" y="308" width="50" height="24" rx="4" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="1025" y="325" fill="#374151" font-size="12" text-anchor="middle">Edit</text>
+
+  <!-- Row 7 - Unavailable -->
+  <line x1="240" y1="336" x2="1260" y2="336" stroke="#F3F4F6" stroke-width="1"/>
+  <text x="268" y="360" fill="#374151" font-size="16">🍷</text>
+  <text x="310" y="360" fill="#111827" font-size="13">Vinho Tinto</text>
+  <text x="510" y="360" fill="#6B7280" font-size="13">Alcoholic Drinks</text>
+  <text x="660" y="360" fill="#111827" font-size="13">$22.00</text>
+  <text x="780" y="360" fill="#111827" font-size="13">0</text>
+  <text x="880" y="360" fill="#EF4444" font-size="13">❌ No</text>
+  <rect x="1000" y="346" width="50" height="24" rx="4" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="1025" y="363" fill="#374151" font-size="12" text-anchor="middle">Edit</text>
+</svg>

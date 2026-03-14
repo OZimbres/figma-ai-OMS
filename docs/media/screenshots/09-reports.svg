@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 900" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Background -->
+  <rect width="1280" height="900" fill="#F3F4F6"/>
+
+  <!-- Sidebar -->
+  <rect width="220" height="900" fill="#1F2937"/>
+  <text x="20" y="40" fill="white" font-size="16" font-weight="bold">🍽  RestaurantOS</text>
+  <line x1="0" y1="55" x2="220" y2="55" stroke="#374151" stroke-width="1"/>
+  <text x="16" y="80" fill="#9CA3AF" font-size="11">ADMIN</text>
+  <rect x="8" y="88" width="204" height="34" rx="6" fill="#3B82F6"/>
+  <text x="20" y="110" fill="white" font-size="14">📈  Relatórios</text>
+  <text x="20" y="138" fill="#D1D5DB" font-size="14">⚙️  Configurações</text>
+  <text x="20" y="870" fill="#9CA3AF" font-size="13">👤  Admin User</text>
+
+  <!-- Title -->
+  <text x="250" y="52" fill="#111827" font-size="22" font-weight="bold">Reports &amp; Analytics</text>
+
+  <!-- KPI Row -->
+  <rect x="240" y="68" width="230" height="80" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="355" y="96" fill="#6B7280" font-size="11" text-anchor="middle">Today Revenue</text>
+  <text x="355" y="130" fill="#111827" font-size="22" font-weight="bold" text-anchor="middle">$1,245.00</text>
+
+  <rect x="486" y="68" width="230" height="80" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="601" y="96" fill="#6B7280" font-size="11" text-anchor="middle">Avg Prep Time</text>
+  <text x="601" y="130" fill="#111827" font-size="22" font-weight="bold" text-anchor="middle">18.5 min</text>
+
+  <rect x="732" y="68" width="230" height="80" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="847" y="96" fill="#6B7280" font-size="11" text-anchor="middle">Customers Today</text>
+  <text x="847" y="130" fill="#111827" font-size="22" font-weight="bold" text-anchor="middle">42</text>
+
+  <rect x="978" y="68" width="230" height="80" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="1093" y="96" fill="#6B7280" font-size="11" text-anchor="middle">Satisfaction</text>
+  <text x="1093" y="130" fill="#111827" font-size="22" font-weight="bold" text-anchor="middle">94%</text>
+
+  <!-- Order Stats -->
+  <text x="250" y="186" fill="#111827" font-size="16" font-weight="600">Order Statistics</text>
+  <text x="260" y="212" fill="#6B7280" font-size="13">Total Orders:</text>
+  <text x="450" y="212" fill="#111827" font-size="13" font-weight="bold">11</text>
+  <text x="260" y="232" fill="#6B7280" font-size="13">Active Orders:</text>
+  <text x="450" y="232" fill="#111827" font-size="13" font-weight="bold">5</text>
+  <text x="260" y="252" fill="#6B7280" font-size="13">Completed Orders:</text>
+  <text x="450" y="252" fill="#111827" font-size="13" font-weight="bold">6</text>
+  <text x="260" y="272" fill="#6B7280" font-size="13">Avg Order Value:</text>
+  <text x="450" y="272" fill="#111827" font-size="13" font-weight="bold">$48.27</text>
+
+  <!-- Table Stats -->
+  <text x="250" y="308" fill="#111827" font-size="16" font-weight="600">Table Statistics</text>
+  <text x="260" y="334" fill="#6B7280" font-size="13">Total Tables:</text>
+  <text x="450" y="334" fill="#111827" font-size="13" font-weight="bold">10</text>
+  <text x="260" y="354" fill="#6B7280" font-size="13">Occupied:</text>
+  <text x="450" y="354" fill="#111827" font-size="13" font-weight="bold">7</text>
+  <text x="260" y="374" fill="#6B7280" font-size="13">Occupancy Rate:</text>
+  <text x="450" y="374" fill="#111827" font-size="13" font-weight="bold">70%</text>
+  <text x="260" y="394" fill="#6B7280" font-size="13">Occupancy</text>
+  <rect x="450" y="380" width="200" height="14" rx="4" fill="#E5E7EB"/>
+  <rect x="450" y="380" width="140" height="14" rx="4" fill="#3B82F6"/>
+  <text x="662" y="394" fill="#111827" font-size="13" font-weight="bold">70%</text>
+
+  <!-- Revenue by Hour -->
+  <text x="250" y="430" fill="#111827" font-size="16" font-weight="600">Revenue by Hour</text>
+  <!-- bars -->
+  <text x="260" y="454" fill="#6B7280" font-size="12">12:00</text>
+  <rect x="410" y="440" width="170" height="14" rx="2" fill="#3B82F6"/>
+  <text x="590" y="454" fill="#6B7280" font-size="12">$320.00</text>
+
+  <text x="260" y="478" fill="#6B7280" font-size="12">13:00</text>
+  <rect x="410" y="464" width="225" height="14" rx="2" fill="#3B82F6"/>
+  <text x="645" y="478" fill="#6B7280" font-size="12">$450.00</text>
+
+  <text x="260" y="502" fill="#6B7280" font-size="12">14:00</text>
+  <rect x="410" y="488" width="140" height="14" rx="2" fill="#3B82F6"/>
+  <text x="560" y="502" fill="#6B7280" font-size="12">$280.00</text>
+
+  <text x="260" y="526" fill="#6B7280" font-size="12">18:00</text>
+  <rect x="410" y="512" width="190" height="14" rx="2" fill="#3B82F6"/>
+  <text x="610" y="526" fill="#6B7280" font-size="12">$380.00</text>
+
+  <text x="260" y="550" fill="#6B7280" font-size="12">20:00</text>
+  <rect x="410" y="536" width="170" height="14" rx="2" fill="#3B82F6"/>
+  <text x="590" y="550" fill="#6B7280" font-size="12">$340.00</text>
+
+  <!-- Top Products -->
+  <text x="700" y="186" fill="#111827" font-size="16" font-weight="600">Top Products</text>
+  <text x="710" y="210" fill="#6B7280" font-size="12">🍕 Pizza Margherita</text>
+  <rect x="870" y="196" width="250" height="14" rx="2" fill="#10B981"/>
+  <text x="1130" y="210" fill="#6B7280" font-size="12">48 sold</text>
+
+  <text x="710" y="234" fill="#6B7280" font-size="12">🍔 Hambúrguer</text>
+  <rect x="870" y="220" width="200" height="14" rx="2" fill="#10B981"/>
+  <text x="1080" y="234" fill="#6B7280" font-size="12">38 sold</text>
+
+  <text x="710" y="258" fill="#6B7280" font-size="12">🥗 Salada César</text>
+  <rect x="870" y="244" width="130" height="14" rx="2" fill="#10B981"/>
+  <text x="1010" y="258" fill="#6B7280" font-size="12">25 sold</text>
+
+  <text x="710" y="282" fill="#6B7280" font-size="12">☕ Café Espresso</text>
+  <rect x="870" y="268" width="100" height="14" rx="2" fill="#10B981"/>
+  <text x="980" y="282" fill="#6B7280" font-size="12">19 sold</text>
+
+  <text x="710" y="306" fill="#6B7280" font-size="12">🍰 Petit Gateau</text>
+  <rect x="870" y="292" width="75" height="14" rx="2" fill="#10B981"/>
+  <text x="955" y="306" fill="#6B7280" font-size="12">14 sold</text>
+
+  <!-- Bill Summary -->
+  <text x="700" y="350" fill="#111827" font-size="16" font-weight="600">Billing Summary</text>
+  <text x="710" y="376" fill="#6B7280" font-size="13">Total Billed:</text>
+  <text x="900" y="376" fill="#111827" font-size="13" font-weight="bold">$5,320.00</text>
+  <text x="710" y="396" fill="#6B7280" font-size="13">Paid:</text>
+  <text x="900" y="396" fill="#111827" font-size="13" font-weight="bold">$3,847.50</text>
+  <text x="710" y="416" fill="#6B7280" font-size="13">Pending Bills:</text>
+  <text x="900" y="416" fill="#F59E0B" font-size="13" font-weight="bold">3</text>
+</svg>
