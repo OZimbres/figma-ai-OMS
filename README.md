@@ -2,6 +2,8 @@
 
 A desktop application for restaurant order management built with **Java 21** (LTS), **JavaFX**, and **Gradle**.
 
+📚 **[Documentação completa →](docs/index.md)**
+
 ## Requirements
 
 - **Java 21** (LTS) or later
