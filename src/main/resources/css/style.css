@@ -361,7 +361,15 @@
 /* ===== Accessibility: ensure contrast for interactive text ===== */
 .nav-btn:hover, .nav-btn:focused { -fx-text-fill: #2C1F1B; }
 .btn-small:hover, .btn-small:focused { -fx-text-fill: #2C1F1B; }
-.tab-pane .tab:selected .tab-label { -fx-text-fill: #2C1F1B; }
+/* For controls with light selected background, ensure selected text is dark */
+.table-row-cell:selected, .table-row-cell:filled:selected,
+.table-cell:selected, .list-cell:selected, .list-cell:filled:selected,
+.tree-cell:selected {
+    -fx-background-color: #FFF3E6;
+    -fx-text-fill: #1F1A17;
+}
+/* Keep tab selected label white because selected tab uses dark background */
+.tab-pane .tab:selected .tab-label { -fx-text-fill: white; }
 .link { -fx-text-fill: #C07A2B; -fx-underline: true; }
 .link:hover { -fx-text-fill: #9A5C1F; }
 .button:focused { -fx-text-fill: #2C1F1B; } /* Hover text color is handled per-button class to ensure contrast */
