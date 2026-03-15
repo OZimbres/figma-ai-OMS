@@ -18,6 +18,7 @@ public class TablesView extends HBox {
     private final DataStore store = DataStore.getInstance();
     private final FlowPane grid = new FlowPane();
     private final VBox sidePanel = new VBox(12);
+    private String selectedTableId = null;
 
     public TablesView() {
         setSpacing(0);

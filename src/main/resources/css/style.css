@@ -396,15 +396,45 @@
 /* ===== Accessibility: ensure contrast for interactive text ===== */
 .nav-btn:hover, .nav-btn:focused { -fx-text-fill: #2C1F1B; }
 .btn-small:hover, .btn-small:focused { -fx-text-fill: #2C1F1B; }
-/* For controls with light selected background, ensure selected text is dark */
-.table-row-cell:selected, .table-row-cell:filled:selected,
-.table-cell:selected, .list-cell:selected, .list-cell:filled:selected,
-.tree-cell:selected {
-    -fx-background-color: #FFF3E6;
-    -fx-text-fill: #1F1A17;
+
+/* Selected card visual for Tables */
+.table-card-selected {
+    -fx-background-color: #FFF1E0;
+    -fx-border-color: #C07A2B;
+    -fx-border-width: 0 0 3 0;
 }
+
+/* Ensure nested labels use dark text when parent selected */
+.table-card-selected .label,
+.table-row-cell:selected .label,
+.list-cell:selected .label,
+.list-cell:selected .bold-label,
+.list-cell:selected .muted-text,
+.table-row-cell:selected,
+.table-cell:selected,
+.list-cell:selected,
+.list-cell:filled:selected,
+.tree-cell:selected {
+    -fx-text-fill: #1F1A17 !important;
+}
+
 /* Keep tab selected label white because selected tab uses dark background */
 .tab-pane .tab:selected .tab-label { -fx-text-fill: white; }
 .link { -fx-text-fill: #C07A2B; -fx-underline: true; }
 .link:hover { -fx-text-fill: #9A5C1F; }
+
+/* Focus indicators */
+.button:focused, .product-btn:focused, .nav-btn:focused {
+    -fx-effect: dropshadow(gaussian, rgba(44,31,27,0.15), 0, 0, 0, 2);
+    -fx-border-color: rgba(44,31,27,0.25);
+}
+
+/* Priority badges: ensure readable background + dark text */
+.priority-critical { -fx-background-color: #FEE2E2; -fx-text-fill: #7F1D1D; -fx-padding: 2 6; -fx-background-radius: 4; -fx-font-weight: bold; }
+.priority-high { -fx-background-color: #FFF7ED; -fx-text-fill: #663E1A; -fx-padding: 2 6; -fx-background-radius: 4; -fx-font-weight: bold; }
+.priority-normal { -fx-background-color: transparent; -fx-text-fill: #666; }
+
+/* Muted italic alias */
+.muted-italic { -fx-text-fill: #999; -fx-font-style: italic; }
+
 .button:focused { -fx-text-fill: #2C1F1B; } /* Hover text color is handled per-button class to ensure contrast */
