@@ -80,15 +80,10 @@ public class KitchenQueueView extends HBox {
 
         Label client = new Label(String.format("%s  |  %s", o.getClientName(), o.getWaiterName()));
         Label time = new Label("Created: " + o.getCreatedAt().format(fmt));
-        time.setStyle("-fx-text-fill: #888;");
+        time.getStyleClass().add("muted-2");
 
-        String priorityStyle = switch (o.getPriority()) {
-            case CRITICAL -> "-fx-text-fill: #EF4444; -fx-font-weight: bold;";
-            case HIGH     -> "-fx-text-fill: #F59E0B; -fx-font-weight: bold;";
-            default       -> "-fx-text-fill: #666;";
-        };
         Label priority = new Label("Priority: " + o.getPriority().getLabel());
-        priority.setStyle(priorityStyle);
+        priority.getStyleClass().add("priority-" + o.getPriority().name().toLowerCase());
 
         VBox itemsBox = new VBox(2);
         for (OrderItem item : o.getItems()) {
@@ -101,7 +96,7 @@ public class KitchenQueueView extends HBox {
 
         if (!o.getSpecialInstructions().isEmpty()) {
             Label special = new Label("\u26A0 " + o.getSpecialInstructions());
-            special.setStyle("-fx-text-fill: #F59E0B;");
+            special.getStyleClass().add("priority-high");
             special.setWrapText(true);
             itemsBox.getChildren().add(special);
         }
@@ -115,7 +110,7 @@ public class KitchenQueueView extends HBox {
         });
 
         Label estTime = new Label(String.format("Est: %d min", o.getEstimatedPrepTime()));
-        estTime.setStyle("-fx-text-fill: #888;");
+        estTime.getStyleClass().add("muted-2");
 
         VBox card = new VBox(6, header, client, time, priority, itemsBox, estTime, moveBtn);
         card.getStyleClass().add("card");
@@ -125,7 +120,7 @@ public class KitchenQueueView extends HBox {
 
     private Label emptyLabel() {
         Label lbl = new Label("No orders");
-        lbl.setStyle("-fx-text-fill: #999; -fx-font-style: italic;");
+        lbl.getStyleClass().add("muted-italic");
         return lbl;
     }
 }

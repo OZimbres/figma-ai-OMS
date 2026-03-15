@@ -144,14 +144,12 @@ public class SettingsView extends VBox {
         statusCol.setCellFactory(col -> new TableCell<>() {
             @Override protected void updateItem(String s, boolean empty) {
                 super.updateItem(s, empty);
-                if (empty || s == null) { setText(null); setStyle(""); } else {
+                if (empty || s == null) { setText(null); setStyle(""); getStyleClass().removeIf(c -> c.startsWith("status-")); } else {
                     setText(s);
-                    String color = switch (s) {
-                        case "Active"   -> "#10B981";
-                        case "On Break" -> "#F59E0B";
-                        default         -> "#EF4444";
-                    };
-                    setStyle("-fx-text-fill: " + color + "; -fx-font-weight: bold;");
+                    getStyleClass().removeIf(c -> c.startsWith("status-"));
+                    String cls = "status-" + s.toLowerCase().replace(" ", "-");
+                    // fallback class if not expected
+                    if (!getStyleClass().contains(cls)) getStyleClass().add(cls); else getStyleClass().add(cls);
                 }
             }
         });

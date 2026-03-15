@@ -125,9 +125,9 @@ public class ReportsView extends VBox {
     private HBox statRow(String label, String value) {
         Label lbl = new Label(label + ":");
         lbl.setPrefWidth(180);
-        lbl.setStyle("-fx-text-fill: #666;");
+        lbl.getStyleClass().add("muted-text");
         Label val = new Label(value);
-        val.setStyle("-fx-font-weight: bold;");
+        val.getStyleClass().add("bold-label");
         return new HBox(12, lbl, val);
     }
 
@@ -139,18 +139,18 @@ public class ReportsView extends VBox {
         bar.getStyleClass().add("chart-bar");
         Label val = new Label(value);
         val.setPrefWidth(80);
-        val.setStyle("-fx-text-fill: #666;");
+        val.getStyleClass().add("muted-text");
         return new HBox(12, lbl, bar, val);
     }
 
     private HBox progressRow(String label, double fraction) {
         Label lbl = new Label(label + ":");
         lbl.setPrefWidth(180);
-        lbl.setStyle("-fx-text-fill: #666;");
+        lbl.getStyleClass().add("muted-text");
         ProgressBar bar = new ProgressBar(fraction);
         bar.setPrefWidth(200);
         Label pct = new Label(String.format("%.0f%%", fraction * 100));
-        pct.setStyle("-fx-font-weight: bold;");
+        pct.getStyleClass().add("bold-label");
         return new HBox(12, lbl, bar, pct);
     }
 }

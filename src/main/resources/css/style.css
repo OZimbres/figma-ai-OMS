@@ -350,6 +350,41 @@
     -fx-background-radius: 6;
 }
 
+/* ===== Inline-style replacement classes ===== */
+.muted-text { -fx-text-fill: #666; }
+.muted-2 { -fx-text-fill: #888; }
+.muted-3 { -fx-text-fill: #999; }
+.bold-label { -fx-font-weight: bold; }
+.pad-top-8 { -fx-padding: 8 0 0 0; }
+.table-number { -fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2C1F1B; }
+
+/* Status badges (used by Tables and Staff) */
+.status-badge { -fx-text-fill: white; -fx-padding: 2 8; -fx-background-radius: 4; }
+.status-free { -fx-background-color: #10B981; }
+.status-occupied { -fx-background-color: #3B82F6; }
+.status-ordering { -fx-background-color: #F59E0B; }
+.status-waiting { -fx-background-color: #8B5CF6; }
+.status-pay { -fx-background-color: #EF4444; }
+
+/* Staff/status text mappings (for SettingsView table) */
+.status-active { -fx-text-fill: #10B981; -fx-font-weight: bold; }
+.status-on-break { -fx-text-fill: #F59E0B; -fx-font-weight: bold; }
+.status-default { -fx-text-fill: #EF4444; -fx-font-weight: bold; }
+
+/* Card bottom border colors per status */
+.card-border-free { -fx-border-color: #10B981; -fx-border-width: 0 0 3 0; }
+.card-border-occupied { -fx-border-color: #3B82F6; -fx-border-width: 0 0 3 0; }
+.card-border-ordering { -fx-border-color: #F59E0B; -fx-border-width: 0 0 3 0; }
+.card-border-waiting { -fx-border-color: #8B5CF6; -fx-border-width: 0 0 3 0; }
+.card-border-pay { -fx-border-color: #EF4444; -fx-border-width: 0 0 3 0; }
+
+/* Priority labels */
+.priority-critical { -fx-text-fill: #EF4444; -fx-font-weight: bold; }
+.priority-high { -fx-text-fill: #F59E0B; -fx-font-weight: bold; }
+.priority-normal { -fx-text-fill: #666; }
+
+.italic-muted { -fx-text-fill: #999; -fx-font-style: italic; }
+
 /* ===== Logo helper ===== */
 .sidebar-logo-image {
     -fx-background-image: url("../images/logo-generated.png");
