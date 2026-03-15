@@ -364,4 +364,4 @@
 .tab-pane .tab:selected .tab-label { -fx-text-fill: #2C1F1B; }
 .link { -fx-text-fill: #C07A2B; -fx-underline: true; }
 .link:hover { -fx-text-fill: #9A5C1F; }
-.button:focused, .button:hover { -fx-text-fill: #FFFFFF; }
+.button:focused { -fx-text-fill: #2C1F1B; } /* Hover text color is handled per-button class to ensure contrast */
