@@ -349,3 +349,19 @@
     -fx-border-radius: 6;
     -fx-background-radius: 6;
 }
+
+/* ===== Logo helper ===== */
+.sidebar-logo-image {
+    -fx-background-image: url("../images/logo-generated.png");
+    -fx-background-size: 48 48;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center left;
+}
+
+/* ===== Accessibility: ensure contrast for interactive text ===== */
+.nav-btn:hover, .nav-btn:focused { -fx-text-fill: #2C1F1B; }
+.btn-small:hover, .btn-small:focused { -fx-text-fill: #2C1F1B; }
+.tab-pane .tab:selected .tab-label { -fx-text-fill: #2C1F1B; }
+.link { -fx-text-fill: #C07A2B; -fx-underline: true; }
+.link:hover { -fx-text-fill: #9A5C1F; }
+.button:focused, .button:hover { -fx-text-fill: #FFFFFF; }
