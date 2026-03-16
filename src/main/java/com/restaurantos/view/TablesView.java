@@ -88,9 +88,11 @@ public class TablesView extends HBox {
 
         card.setOnMouseClicked(e -> {
             // Select this table and clear any previous selection
-            selectedTableId = t.getId();
-            refreshGrid();
-            showTableDetail(t);
+            if (t.getId() != null) {
+                selectedTableId = t.getId();
+                refreshGrid();
+                showTableDetail(t);
+            }
         });
         return card;
     }
