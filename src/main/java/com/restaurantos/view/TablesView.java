@@ -79,7 +79,23 @@ public class TablesView extends HBox {
         card.getStyleClass().add("card");
         card.getStyleClass().add("card-border-" + t.getStatus().name().toLowerCase());
 
-        card.setOnMouseClicked(e -> showTableDetail(t));
+        // Apply selected class if this table is currently selected
+        if (t.getId() != null && t.getId().equals(selectedTableId)) {
+            if (!card.getStyleClass().contains("table-card-selected")) {
+                card.getStyleClass().add("table-card-selected");
+            }
+        }
+
+        card.setOnMouseClicked(e -> {
+            // Toggle selection on click
+            if (t.getId() != null && t.getId().equals(selectedTableId)) {
+                selectedTableId = null;
+            } else {
+                selectedTableId = t.getId();
+            }
+            refreshGrid();
+            showTableDetail(t);
+        });
         return card;
     }
 
