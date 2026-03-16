@@ -88,10 +88,11 @@ public class TablesView extends HBox {
 
         card.setOnMouseClicked(e -> {
             // Select this table and clear any previous selection
+            // Note: If table has null ID, we clear selection but still show details (graceful degradation)
             if (t.getId() != null) {
                 selectedTableId = t.getId();
             } else {
-                selectedTableId = null; // Clear selection if clicking a table with null ID
+                selectedTableId = null;
             }
             refreshGrid();
             showTableDetail(t);
