@@ -224,6 +224,12 @@
     -fx-background-color: #FFF3E6;
 }
 
+/* Ensure order list cell labels have dark text when selected */
+.list-cell:selected .order-list-top,
+.list-cell:selected .order-list-bottom {
+    -fx-text-fill: #1F1A17;
+}
+
 /* ===== Text Fields ===== */
 .text-field {
     -fx-background-color: white;
