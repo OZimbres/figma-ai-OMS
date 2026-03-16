@@ -90,8 +90,10 @@ public class TablesView extends HBox {
             // Select this table and clear any previous selection
             if (t.getId() != null) {
                 selectedTableId = t.getId();
-                refreshGrid();
+            } else {
+                selectedTableId = null; // Clear selection if clicking a table with null ID
             }
+            refreshGrid();
             showTableDetail(t);
         });
         return card;
