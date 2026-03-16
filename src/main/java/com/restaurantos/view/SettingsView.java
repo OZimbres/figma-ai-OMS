@@ -158,10 +158,7 @@ public class SettingsView extends VBox {
                         case "Off Duty" -> "status-off-duty";
                         default -> "status-default";
                     };
-                    // Guard against duplicate class additions
-                    if (!getStyleClass().contains(cls)) {
-                        getStyleClass().add(cls);
-                    }
+                    getStyleClass().add(cls);
                 }
             }
         });
