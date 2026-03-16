@@ -145,7 +145,7 @@ public class SettingsView extends VBox {
             @Override protected void updateItem(String s, boolean empty) {
                 super.updateItem(s, empty);
                 setText(empty || s == null ? null : s);
-                setStyle(empty || s == null ? "" : null);
+                setStyle("");
                 
                 // Remove any existing status-* classes
                 getStyleClass().removeIf(c -> c.startsWith("status-"));
