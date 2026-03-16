@@ -91,8 +91,8 @@ public class TablesView extends HBox {
             if (t.getId() != null) {
                 selectedTableId = t.getId();
                 refreshGrid();
-                showTableDetail(t);
             }
+            showTableDetail(t);
         });
         return card;
     }
