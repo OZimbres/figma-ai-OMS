@@ -87,12 +87,8 @@ public class TablesView extends HBox {
         }
 
         card.setOnMouseClicked(e -> {
-            // Toggle selection on click
-            if (t.getId() != null && t.getId().equals(selectedTableId)) {
-                selectedTableId = null;
-            } else {
-                selectedTableId = t.getId();
-            }
+            // Select this table and clear any previous selection
+            selectedTableId = t.getId();
             refreshGrid();
             showTableDetail(t);
         });
