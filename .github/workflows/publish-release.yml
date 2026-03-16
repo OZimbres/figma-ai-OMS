@@ -1,0 +1,48 @@
+name: Publish Installer as Release
+
+on:
+  workflow_run:
+    workflows: ["Build and Package (jpackage)"]
+    types: [completed]
+
+jobs:
+  publish_release:
+    name: Publish Release (on success)
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download installer artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: restaurant-installer
+          path: ./installer
+
+      - name: Find installer file
+        id: find_installer
+        run: |
+          set -e
+          FILE=$(ls installer | grep -i '\.exe$' | head -n1 || true)
+          if [ -z "$FILE" ]; then echo "No .exe installer found in installer/"; exit 1; fi
+          echo "installer=installer/$FILE" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: installer-${{ github.event.workflow_run.head_sha }}
+          release_name: Installer - ${{ github.event.workflow_run.head_sha }}
+          body: |
+            Automated installer created by the "Build and Package (jpackage)" workflow.
+            Workflow run: ${{ github.event.workflow_run.html_url }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload installer to release
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ steps.find_installer.outputs.installer }}
+          asset_name: restaurant-installer.exe
+          asset_content_type: application/octet-stream
