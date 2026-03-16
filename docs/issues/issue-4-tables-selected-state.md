@@ -57,11 +57,11 @@ Suggested fix:
 Logs: build\logs\app-run.final.log
 
 Attachments:
-- Screenshot: /build/screenshots/tables_screen.png
+- Screenshot: /docs/issues/images/tables_screen.png
 
 Inline preview (if supported by GitHub):
 
-![Tables screen](/build/screenshots/tables_screen.png)
+![Tables screen](/docs/issues/images/tables_screen.png)
 
 Notes: The screenshot above was captured after starting the packaged start script in this environment. GUI windows may not render in remote CI; please run locally if the image does not display.
 
