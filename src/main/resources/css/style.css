@@ -418,6 +418,30 @@
     -fx-text-fill: #1F1A17 !important;
 }
 
+/* Ensure status classes use dark text when in selected rows */
+.table-row-cell:selected .status-active,
+.table-row-cell:selected .status-on-break,
+.table-row-cell:selected .status-default,
+.table-cell:selected .status-active,
+.table-cell:selected .status-on-break,
+.table-cell:selected .status-default {
+    -fx-text-fill: #1F1A17 !important;
+}
+
+/* Wildcard selector to catch any nested elements in selected cells */
+.table-row-cell:selected *,
+.table-cell:selected *,
+.list-cell:selected * {
+    -fx-text-fill: #1F1A17 !important;
+}
+
+/* Preserve button text colors in selected cells - buttons have their own backgrounds */
+.table-row-cell:selected .button,
+.table-cell:selected .button,
+.list-cell:selected .button {
+    -fx-text-fill: white !important;
+}
+
 /* Keep tab selected label white because selected tab uses dark background */
 .tab-pane .tab:selected .tab-label { -fx-text-fill: white; }
 .link { -fx-text-fill: #C07A2B; -fx-underline: true; }
