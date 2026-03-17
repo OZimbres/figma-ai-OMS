@@ -46,9 +46,8 @@ public class App extends Application {
 
     private VBox buildSidebar() {
         // Logo
-        Label logo = new Label("\uD83C\uDF7D  RestaurantOS");
-        logo.getStyleClass().add("sidebar-logo");
-        logo.setPadding(new Insets(20, 16, 20, 16));
+        Label logo = new Label("Café com Prosa");
+        logo.getStyleClass().addAll("sidebar-logo","sidebar-logo-image");
 
         // Navigation sections
         Label opsLabel = sectionLabel("OPERATIONS");

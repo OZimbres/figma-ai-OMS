@@ -159,7 +159,7 @@ public class BillsView extends HBox {
         // Actions
         if (b.getStatus() == BillStatus.PENDING) {
             Label actLabel = new Label("Actions:");
-            actLabel.setStyle("-fx-font-weight: bold; -fx-padding: 8 0 0 0;");
+            actLabel.getStyleClass().addAll("bold-label", "pad-top-8");
             sidePanel.getChildren().add(actLabel);
 
             for (PaymentMethod pm : PaymentMethod.values()) {

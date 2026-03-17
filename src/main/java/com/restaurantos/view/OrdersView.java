@@ -286,10 +286,10 @@ public class OrdersView extends HBox {
             if (empty || order == null) { setText(null); setGraphic(null); return; }
             VBox box = new VBox(2);
             Label top = new Label(String.format("#%s  Table %d", order.getId(), order.getTableNumber()));
-            top.setStyle("-fx-font-weight: bold;");
+            top.getStyleClass().addAll("bold-label", "order-list-top");
             Label bottom = new Label(String.format("%s  |  %s  |  $%.2f",
                     order.getClientName(), order.getStatus().getLabel(), order.getTotal()));
-            bottom.setStyle("-fx-text-fill: #666;");
+            bottom.getStyleClass().addAll("muted-text", "order-list-bottom");
             box.getChildren().addAll(top, bottom);
             setGraphic(box);
         }

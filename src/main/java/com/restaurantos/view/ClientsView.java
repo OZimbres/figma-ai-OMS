@@ -114,12 +114,12 @@ public class ClientsView extends HBox {
 
         if (c.isVip()) {
             Label vip = new Label("\u2B50 VIP Client");
-            vip.setStyle("-fx-text-fill: #F59E0B; -fx-font-weight: bold;");
+            vip.getStyleClass().addAll("priority-high", "bold-label");
             sidePanel.getChildren().add(vip);
         }
 
         Label tier = new Label("Loyalty: " + c.getLoyaltyTier());
-        tier.setStyle("-fx-font-weight: bold;");
+        tier.getStyleClass().add("bold-label");
 
         Label phone = new Label("\uD83D\uDCDE " + c.getPhone());
         Label email = new Label("\u2709 " + c.getEmail());

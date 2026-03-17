@@ -18,6 +18,7 @@ public class TablesView extends HBox {
     private final DataStore store = DataStore.getInstance();
     private final FlowPane grid = new FlowPane();
     private final VBox sidePanel = new VBox(12);
+    private String selectedTableId = null;
 
     public TablesView() {
         setSpacing(0);
@@ -37,7 +38,7 @@ public class TablesView extends HBox {
         sidePanel.getStyleClass().add("side-panel");
 
         Label sidePlaceholder = new Label("Select a table");
-        sidePlaceholder.setStyle("-fx-text-fill: #999;");
+        sidePlaceholder.getStyleClass().add("muted-3");
         sidePanel.getChildren().add(sidePlaceholder);
 
         getChildren().addAll(gridScroll, sidePanel);
@@ -54,32 +55,49 @@ public class TablesView extends HBox {
     }
 
     private VBox tableCard(RestaurantTable t) {
-        String color = switch (t.getStatus()) {
-            case FREE     -> "#10B981";
-            case OCCUPIED -> "#3B82F6";
-            case ORDERING -> "#F59E0B";
-            case WAITING  -> "#8B5CF6";
-            case PAY      -> "#EF4444";
-        };
-
         Label num = new Label("Table " + t.getNumber());
-        num.setStyle("-fx-font-size: 18; -fx-font-weight: bold;");
+        num.getStyleClass().add("table-number");
 
         Label statusLabel = new Label(t.getStatus().getLabel());
-        statusLabel.setStyle(String.format("-fx-text-fill: white; -fx-background-color: %s; -fx-padding: 2 8; -fx-background-radius: 4;", color));
+        statusLabel.getStyleClass().addAll("status-badge", "status-" + t.getStatus().name().toLowerCase());
 
         Label seats = new Label(String.format("%d/%d seats", t.getGuests(), t.getSeats()));
-        seats.setStyle("-fx-text-fill: #666;");
+        seats.getStyleClass().add("muted-text");
 
         VBox card = new VBox(8, num, statusLabel, seats);
         card.setAlignment(Pos.CENTER);
         card.setPadding(new Insets(16));
         card.setPrefSize(160, 130);
         card.getStyleClass().add("card");
-        card.setStyle(card.getStyle() + String.format("-fx-border-color: %s; -fx-border-width: 0 0 3 0;", color));
+        card.getStyleClass().add("card-border-" + t.getStatus().name().toLowerCase());
 
-        card.setOnMouseClicked(e -> showTableDetail(t));
+        // Apply selected class if this table is currently selected
+        if (t.getId() != null && t.getId().equals(selectedTableId)) {
+            if (!card.getStyleClass().contains("table-card-selected")) {
+                card.getStyleClass().add("table-card-selected");
+            }
+        }
+
+        card.setOnMouseClicked(e -> {
+            // Toggle selection on click
+            if (t.getId() != null && t.getId().equals(selectedTableId)) {
+                selectedTableId = null;
+                refreshGrid();
+                restorePlaceholder();
+            } else {
+                selectedTableId = t.getId();
+                refreshGrid();
+                showTableDetail(t);
+            }
+        });
         return card;
+    }
+
+    private void restorePlaceholder() {
+        sidePanel.getChildren().clear();
+        Label sidePlaceholder = new Label("Select a table");
+        sidePlaceholder.getStyleClass().add("muted-3");
+        sidePanel.getChildren().add(sidePlaceholder);
     }
 
     private void showTableDetail(RestaurantTable t) {
@@ -111,7 +129,7 @@ public class TablesView extends HBox {
 
         // Status change buttons
         Label changeLabel = new Label("Change Status:");
-        changeLabel.setStyle("-fx-font-weight: bold; -fx-padding: 8 0 0 0;");
+        changeLabel.getStyleClass().addAll("bold-label", "pad-top-8");
         sidePanel.getChildren().add(changeLabel);
 
         HBox buttons = new HBox(6);
