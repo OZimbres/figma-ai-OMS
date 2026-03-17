@@ -71,16 +71,18 @@ Various selection states (TableView, ListView, TreeView) needed to ensure text r
     -fx-text-fill: #1F1A17 !important;
 }
 ```
-**Note:** This rule already existed and provides base coverage for explicit label classes.
+**Note:** Includes `.table-card-selected .label` to cover label text inside selected table cards.
 
 #### 2. Status Class Override (Lines 421-429) ✨ NEW
 ```css
 /* Ensure status classes use dark text when in selected rows */
 .table-row-cell:selected .status-active,
 .table-row-cell:selected .status-on-break,
+.table-row-cell:selected .status-off-duty,
 .table-row-cell:selected .status-default,
 .table-cell:selected .status-active,
 .table-cell:selected .status-on-break,
+.table-cell:selected .status-off-duty,
 .table-cell:selected .status-default {
     -fx-text-fill: #1F1A17 !important;
 }
@@ -136,7 +138,7 @@ Various selection states (TableView, ListView, TreeView) needed to ensure text r
 
 #### CSS Specificity
 - All rules use `!important` to override any conflicting styles
-- Status class rules declared after wildcard to take precedence
+- Status class override rules appear before the wildcard selector, but take precedence due to higher specificity (class + pseudo-class vs. pseudo-class + `*`)
 - Button exception rules declared last to override wildcard
 
 ## Testing & Verification

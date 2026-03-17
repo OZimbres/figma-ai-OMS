@@ -46,8 +46,8 @@ CSS for selected state:
   ```css
   .table-card-selected {
       -fx-background-color: #FFF1E0;
-      -fx-border-color: #C07A2B;
-      -fx-border-width: 0 0 3 0;
+      -fx-border-color: #C07A2B !important;
+      -fx-border-width: 2 !important;
   }
   ```
 

@@ -37,7 +37,7 @@
 /* ===== Nav Buttons ===== */
 .nav-btn {
     -fx-background-color: transparent;
-    -fx-text-fill: #6B584F;
+    -fx-text-fill: #D8C7BC;
     -fx-font-size: 13px;
     -fx-padding: 8 16;
     -fx-cursor: hand;
@@ -46,8 +46,8 @@
 }
 
 .nav-btn:hover {
-    -fx-background-color: rgba(62,42,35,0.12);
-    -fx-text-fill: #2C1F1B;
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-text-fill: #FBF6F2;
 }
 
 .nav-btn-active {
@@ -389,6 +389,7 @@
 /* Staff/status text mappings (for SettingsView table) */
 .status-active { -fx-text-fill: #10B981; -fx-font-weight: bold; }
 .status-on-break { -fx-text-fill: #F59E0B; -fx-font-weight: bold; }
+.status-off-duty { -fx-text-fill: #6B7280; -fx-font-weight: bold; }
 .status-default { -fx-text-fill: #EF4444; -fx-font-weight: bold; }
 
 /* Card bottom border colors per status */
@@ -408,10 +409,11 @@
     -fx-background-size: 48 48;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center left;
+    -fx-padding: 20 16 20 60;
 }
 
 /* ===== Accessibility: ensure contrast for interactive text ===== */
-.nav-btn:hover, .nav-btn:focused { -fx-text-fill: #2C1F1B; }
+.nav-btn:hover, .nav-btn:focused { -fx-background-color: rgba(255,255,255,0.1); -fx-text-fill: #FBF6F2; }
 .btn-small:hover, .btn-small:focused { -fx-text-fill: #2C1F1B; }
 
 /* Selected card visual for Tables */
@@ -422,6 +424,7 @@
 }
 
 /* Ensure nested labels use dark text when parent selected */
+.table-card-selected .label,
 .table-row-cell:selected .label,
 .list-cell:selected .label,
 .list-cell:selected .bold-label,
@@ -437,9 +440,11 @@
 /* Ensure status classes use dark text when in selected rows */
 .table-row-cell:selected .status-active,
 .table-row-cell:selected .status-on-break,
+.table-row-cell:selected .status-off-duty,
 .table-row-cell:selected .status-default,
 .table-cell:selected .status-active,
 .table-cell:selected .status-on-break,
+.table-cell:selected .status-off-duty,
 .table-cell:selected .status-default {
     -fx-text-fill: #1F1A17 !important;
 }
