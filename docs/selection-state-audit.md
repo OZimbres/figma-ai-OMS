@@ -53,9 +53,9 @@ Various selection states (TableView, ListView, TreeView) needed to ensure text r
 ## Implementation
 
 ### CSS Changes Made
-**File:** `src/main/resources/css/style.css` (Lines 407-443)
+**File:** `src/main/resources/css/style.css`
 
-#### 1. Core Selection Text Rule (Lines 407-419)
+#### 1. Core Selection Text Rule (Lines 407-419) - EXISTING
 ```css
 /* Ensure nested labels use dark text when parent selected */
 .table-card-selected .label,
@@ -71,6 +71,7 @@ Various selection states (TableView, ListView, TreeView) needed to ensure text r
     -fx-text-fill: #1F1A17 !important;
 }
 ```
+**Note:** This rule already existed and provides base coverage for explicit label classes.
 
 #### 2. Status Class Override (Lines 421-429) ✨ NEW
 ```css
@@ -191,10 +192,11 @@ The following screens should be tested with row/cell selection:
 ## Summary
 
 ### Changes Made
-- ✨ Added 3 new CSS rule blocks (24 total lines)
-- ✨ Explicit status class overrides (6 selectors)
-- ✨ Comprehensive wildcard selectors (3 selectors)
-- ✨ Button exception rules (3 selectors)
+- ✨ Added 3 new CSS rule blocks (total 24 lines added, lines 421-443)
+- ✨ Explicit status class overrides (6 selectors, lines 421-429)
+- ✨ Comprehensive wildcard selectors (3 selectors, lines 431-436)
+- ✨ Button exception rules (3 selectors, lines 438-443)
+- 📝 Existing base rule (lines 407-419) provides foundation
 
 ### Issues Resolved
 ✅ Status column colored text in selected rows
