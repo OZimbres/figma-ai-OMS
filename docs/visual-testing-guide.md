@@ -267,3 +267,7 @@ After completing all test cases:
 **Result:** ⬜ PASS ⬜ FAIL (with issues documented)
 
 **Notes:**
+
+---
+
+**End of Visual Testing Guide**
