@@ -16,6 +16,8 @@ jobs:
         with:
           name: restaurant-installer
           path: ./installer
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Find installer file
         id: find_installer
@@ -25,24 +27,14 @@ jobs:
           if [ -z "$FILE" ]; then echo "No .exe installer found in installer/"; exit 1; fi
           echo "installer=installer/$FILE" >> $GITHUB_OUTPUT
 
-      - name: Create GitHub Release
-        id: create_release
-        uses: actions/create-release@v1
+      - name: Create GitHub Release and upload installer
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: installer-${{ github.event.workflow_run.head_sha }}
-          release_name: Installer - ${{ github.event.workflow_run.head_sha }}
+          name: Installer - ${{ github.event.workflow_run.head_sha }}
           body: |
             Automated installer created by the "Build and Package (jpackage)" workflow.
             Workflow run: ${{ github.event.workflow_run.html_url }}
+          files: ${{ steps.find_installer.outputs.installer }}
           draft: false
           prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload installer to release
-        uses: actions/upload-release-asset@v1
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ steps.find_installer.outputs.installer }}
-          asset_name: restaurant-installer.exe
-          asset_content_type: application/octet-stream

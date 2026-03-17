@@ -39,8 +39,22 @@ jobs:
         shell: powershell
         run: |
           $jpackage = (Get-Command jpackage).Source
-          $icon = if (Test-Path 'src\main\resources\images\app.ico') { "--icon src\\main\\resources\\images\\app.ico" } else { "" }
-          & $jpackage --type exe --name "Restaurant-OMS" --input "build\libs" --main-jar "restaurant-oms.jar" --main-class "com.restaurantos.App" --java-options "-Xmx512m" --win-dir-chooser --win-shortcut --win-menu $icon --dest "build\jpackage"
+          $jpackageArgs = @(
+            '--type',        'exe',
+            '--name',        'Restaurant-OMS',
+            '--input',       'build\libs',
+            '--main-jar',    'restaurant-oms.jar',
+            '--main-class',  'com.restaurantos.App',
+            '--java-options','-Xmx512m',
+            '--win-dir-chooser',
+            '--win-shortcut',
+            '--win-menu',
+            '--dest',        'build\jpackage'
+          )
+          if (Test-Path 'src\main\resources\images\app.ico') {
+            $jpackageArgs += '--icon', 'src\main\resources\images\app.ico'
+          }
+          & $jpackage @jpackageArgs
 
       - name: Upload installer artifact
         uses: actions/upload-artifact@v4
