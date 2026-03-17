@@ -144,9 +144,9 @@ public class SettingsView extends VBox {
         statusCol.setCellFactory(col -> new TableCell<>() {
             @Override protected void updateItem(String s, boolean empty) {
                 super.updateItem(s, empty);
+                setText(empty || s == null ? null : s);
                 if (empty || s == null) {
                     setText(null);
-                    setStyle("");
                     getStyleClass().removeIf(c -> c.startsWith("status-"));
                 } else {
                     setText(s);
@@ -154,6 +154,7 @@ public class SettingsView extends VBox {
                     String cls = switch (s) {
                         case "Active" -> "status-active";
                         case "On Break" -> "status-on-break";
+                        case "Off Duty" -> "status-off-duty";
                         default -> "status-default";
                     };
                     getStyleClass().add(cls);

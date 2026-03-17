@@ -9,7 +9,7 @@ O que foi alterado
 Como atualizar a identidade visual
 1. Substitua o logo: coloque a nova imagem em src\main\resources\images (mesmo caminho ou atualize o CSS).
 2. Fontes: adicione arquivos de fontes em resources e use @font-face no CSS, depois defina -fx-font-family em .root ou seletores relevantes.
-3. Cores: edite as variáveis de paleta no topo de style.css (procure por :root e cores primárias).
+3. Cores: edite as cores diretamente em style.css. A paleta base está no seletor `.root` no início do arquivo. Busque por `.root` e pelos valores hex primários (ex.: `#C07A2B`, `#FBF9F7`) para localizar as cores a serem alteradas.
 
 Trabalho restante
 - Revisão manual: algumas views podem aplicar estilos inline dinamicamente; rode um grep por setStyle(" em src/ para localizar.

@@ -4,7 +4,7 @@ Minimum (developer run)
 - OS: Windows 10/11 (tested), macOS/Linux supported for building/running with appropriate jpackage tool differences.
 - Java: JDK 21 (or 17+ compatible). Use the full JDK when building with jpackage.
 - JavaFX: JavaFX 21 (matching JDK major where possible). When running the JAR directly, provide --module-path to JavaFX SDK libs.
-- Gradle: 7+ (project uses Gradle wrapper; prefer ./gradlew)
+- Gradle: 8.5 (pinned via Gradle wrapper — always use `./gradlew` or `gradlew.bat` instead of a local Gradle install)
 
 Packaging (Windows installer)
 - jpackage (part of the JDK used for packaging)
