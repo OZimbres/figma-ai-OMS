@@ -146,14 +146,11 @@ public class SettingsView extends VBox {
                 super.updateItem(s, empty);
                 setText(empty || s == null ? null : s);
                 if (empty || s == null) {
-                    setStyle("");
-                }
-                
-                // Remove any existing status-* classes
-                getStyleClass().removeIf(c -> c.startsWith("status-"));
-                
-                // Add the appropriate status class if not empty
-                if (!empty && s != null) {
+                    setText(null);
+                    getStyleClass().removeIf(c -> c.startsWith("status-"));
+                } else {
+                    setText(s);
+                    getStyleClass().removeIf(c -> c.startsWith("status-"));
                     String cls = switch (s) {
                         case "Active" -> "status-active";
                         case "On Break" -> "status-on-break";
