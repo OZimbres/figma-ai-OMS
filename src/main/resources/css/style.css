@@ -378,10 +378,10 @@
 .card-border-waiting { -fx-border-color: #8B5CF6; -fx-border-width: 0 0 3 0; }
 .card-border-pay { -fx-border-color: #EF4444; -fx-border-width: 0 0 3 0; }
 
-/* Priority labels */
-.priority-critical { -fx-text-fill: #EF4444; -fx-font-weight: bold; }
-.priority-high { -fx-text-fill: #F59E0B; -fx-font-weight: bold; }
-.priority-normal { -fx-text-fill: #666; }
+/* Priority labels - DEPRECATED: Replaced by priority badges below for better contrast */
+/* .priority-critical { -fx-text-fill: #EF4444; -fx-font-weight: bold; } */
+/* .priority-high { -fx-text-fill: #F59E0B; -fx-font-weight: bold; } */
+/* .priority-normal { -fx-text-fill: #666; } */
 
 .italic-muted { -fx-text-fill: #999; -fx-font-style: italic; }
 
@@ -429,10 +429,49 @@
     -fx-border-color: rgba(44,31,27,0.25);
 }
 
-/* Priority badges: ensure readable background + dark text */
-.priority-critical { -fx-background-color: #FEE2E2; -fx-text-fill: #7F1D1D; -fx-padding: 2 6; -fx-background-radius: 4; -fx-font-weight: bold; }
-.priority-high { -fx-background-color: #FFF7ED; -fx-text-fill: #663E1A; -fx-padding: 2 6; -fx-background-radius: 4; -fx-font-weight: bold; }
-.priority-normal { -fx-background-color: transparent; -fx-text-fill: #666; }
+/* Priority badges: ensure readable background + dark text in all states */
+.priority-critical { 
+    -fx-background-color: #FEE2E2; 
+    -fx-text-fill: #7F1D1D !important; 
+    -fx-padding: 2 6; 
+    -fx-background-radius: 4; 
+    -fx-font-weight: bold; 
+}
+.priority-high { 
+    -fx-background-color: #FFF7ED; 
+    -fx-text-fill: #663E1A !important; 
+    -fx-padding: 2 6; 
+    -fx-background-radius: 4; 
+    -fx-font-weight: bold; 
+}
+.priority-normal { 
+    -fx-background-color: #F3F4F6; 
+    -fx-text-fill: #4B5563 !important; 
+    -fx-padding: 2 6; 
+    -fx-background-radius: 4; 
+}
+
+/* Ensure priority badges maintain their backgrounds even when parent is selected */
+.table-card-selected .priority-critical,
+.table-row-cell:selected .priority-critical,
+.list-cell:selected .priority-critical {
+    -fx-background-color: #FEE2E2 !important;
+    -fx-text-fill: #7F1D1D !important;
+}
+
+.table-card-selected .priority-high,
+.table-row-cell:selected .priority-high,
+.list-cell:selected .priority-high {
+    -fx-background-color: #FFF7ED !important;
+    -fx-text-fill: #663E1A !important;
+}
+
+.table-card-selected .priority-normal,
+.table-row-cell:selected .priority-normal,
+.list-cell:selected .priority-normal {
+    -fx-background-color: #F3F4F6 !important;
+    -fx-text-fill: #4B5563 !important;
+}
 
 /* Muted italic alias */
 .muted-italic { -fx-text-fill: #999; -fx-font-style: italic; }
