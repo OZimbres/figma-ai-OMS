@@ -166,6 +166,20 @@
     -fx-background-color: #DC2626;
 }
 
+.btn-danger-small {
+    -fx-background-color: #EF4444;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 2 8;
+    -fx-background-radius: 4;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+
+.btn-danger-small:hover {
+    -fx-background-color: #DC2626;
+}
+
 /* ===== Product Button ===== */
 .product-btn {
     -fx-background-color: white;
@@ -384,10 +398,7 @@
 .card-border-waiting { -fx-border-color: #8B5CF6; -fx-border-width: 0 0 3 0; }
 .card-border-pay { -fx-border-color: #EF4444; -fx-border-width: 0 0 3 0; }
 
-/* Priority labels - DEPRECATED: Replaced by priority badges below for better contrast */
-/* .priority-critical { -fx-text-fill: #EF4444; -fx-font-weight: bold; } */
-/* .priority-high { -fx-text-fill: #F59E0B; -fx-font-weight: bold; } */
-/* .priority-normal { -fx-text-fill: #666; } */
+/* Priority labels — badge style with readable background + dark text */
 
 .italic-muted { -fx-text-fill: #999; -fx-font-style: italic; }
 
@@ -411,7 +422,6 @@
 }
 
 /* Ensure nested labels use dark text when parent selected */
-.table-card-selected .label,
 .table-row-cell:selected .label,
 .list-cell:selected .label,
 .list-cell:selected .bold-label,
@@ -422,6 +432,14 @@
 .list-cell:filled:selected,
 .tree-cell:selected {
     -fx-text-fill: #1F1A17 !important;
+}
+
+/* table-card-selected: dark text on labels but preserve status-badge white text */
+.table-card-selected .label {
+    -fx-text-fill: #1F1A17 !important;
+}
+.table-card-selected .status-badge {
+    -fx-text-fill: white !important;
 }
 
 /* Keep tab selected label white because selected tab uses dark background */
@@ -482,4 +500,7 @@
 /* Muted italic alias */
 .muted-italic { -fx-text-fill: #999; -fx-font-style: italic; }
 
-.button:focused { -fx-text-fill: #2C1F1B; } /* Hover text color is handled per-button class to ensure contrast */
+/* Focused text color for neutral/small buttons only — primary/danger keep white via their own rules */
+.btn-small:focused { -fx-text-fill: #2C1F1B; }
+.btn-primary:focused { -fx-text-fill: white; }
+.btn-danger:focused { -fx-text-fill: white; }
