@@ -68,7 +68,7 @@ Catálogo completo de todas as funcionalidades disponíveis no sistema.
 | Adicionar produto | Dialog com campos: nome, categoria, preço, tempo de preparo, emoji e disponibilidade |
 | Editar produto | Mesmo dialog pré-preenchido para atualizar dados de produto existente |
 | Disponibilidade | Indicador visual ✅ Sim / ❌ Não para controle de disponibilidade no cardápio |
-| Categorias | Categorização de produtos (Bebidas, Pratos Principais, Sobremesas, etc.) |
+| Categorias | Categorias disponíveis: Drinks, Pastries, Sandwiches, Meals, Desserts |
 | Tempo de preparo | Campo em minutos usado para estimativa na cozinha |
 
 ---
@@ -81,7 +81,7 @@ Catálogo completo de todas as funcionalidades disponíveis no sistema.
 | Busca | Filtragem por nome, e-mail ou telefone |
 | Perfil no painel lateral | Ao selecionar: informações detalhadas de contato, histórico e gastos |
 | Indicador VIP | ⭐ VIP para clientes especiais |
-| Tiers de fidelidade | Bronze, Silver, Gold conforme histórico de visitas e gastos |
+| Tiers de fidelidade | Bronze, Silver, Gold, Platinum conforme número de visitas (15/30/50+) |
 | Barra de gastos | Barra de progresso visual comparando o total gasto com o maior cliente |
 | Último pedido | Data e hora do último pedido registrado |
 
@@ -95,7 +95,7 @@ Catálogo completo de todas as funcionalidades disponíveis no sistema.
 | Listagem de cobranças | Tabela com ID, mesa, cliente, total, método de pagamento, status e data |
 | Filtro por status | Todos, Pendente, Pago, Cancelado |
 | Detalhes no painel lateral | ID, mesa, cliente, pedido vinculado, total, método, status e data |
-| Processar pagamento | Botões para pagar com cada método disponível: Dinheiro, Cartão de Crédito, Cartão de Débito, PIX |
+| Processar pagamento | Botões para pagar com cada método disponível: Dinheiro (Cash), Cartão (Card), Digital |
 | Cancelar cobrança | Botão para cancelar uma cobrança pendente |
 | Atualização automática | Resumo e tabela atualizam em tempo real |
 
@@ -172,19 +172,18 @@ Catálogo completo de todas as funcionalidades disponíveis no sistema.
 
 ## 💳 Métodos de Pagamento
 
-- 💵 Dinheiro (Cash)
-- 💳 Cartão de Crédito
-- 💳 Cartão de Débito
-- 📱 PIX
+- 💵 Cash (Dinheiro)
+- 💳 Card (Cartão)
+- 📱 Digital (PIX, transferência, etc.)
 
 ## ⭐ Tiers de Fidelidade de Clientes
 
 | Tier | Critério |
 |------|----------|
-| Bronze | Clientes novos / poucos pedidos |
-| Silver | Frequência moderada |
-| Gold | Alta frequência / alto valor gasto |
-| VIP | Designação especial pela gestão |
+| Bronze | Menos de 15 visitas |
+| Silver | 15 ou mais visitas |
+| Gold | 30 ou mais visitas (também marcado como VIP ⭐) |
+| Platinum | 50 ou mais visitas (também marcado como VIP ⭐) |
 
 ---
 

@@ -29,7 +29,7 @@ A tela é dividida em **três painéis**:
 - A lista atualiza automaticamente a cada caractere digitado
 
 **Filtro de status:**
-Dropdown com as opções: `Todos | Novo | Em Preparo | Pronto | Servido | Concluído`
+Dropdown com as opções: `All | New | Preparing | Ready | Served | Completed`
 
 ### Lista de Pedidos
 
@@ -85,7 +85,7 @@ Special: None
 Botões de ação exibem todos os status disponíveis, exceto o atual:
 
 ```
-[ Novo ] [ Enviado ] [ Pronto ] [ Servido ] [ Concluído ]
+[ New ] [ Sent ] [ Preparing ] [ Ready ] [ Served ] [ Completed ]
 ```
 
 Clique no status desejado para atualizar imediatamente.
@@ -93,7 +93,7 @@ Clique no status desejado para atualizar imediatamente.
 ### Definir Prioridade
 
 ```
-Priority:  [ Normal ]  [ Alta ]  [ Crítica ]
+Priority:  [ Normal ]  [ High ]  [ Critical ]
 ```
 
 O botão do status atual fica em destaque. Pedidos críticos aparecem em vermelho na [Fila da Cozinha](04-kitchen-queue.md).
@@ -138,12 +138,12 @@ Adicionar Items
 ## Fluxo Completo de um Pedido
 
 ```
-1. Garçom cria pedido        → Status: Novo
-2. Garçom envia para cozinha → Status: Enviado
-3. Cozinha inicia preparo    → Status: Em Preparo  ← visível na Kitchen Queue
-4. Prato fica pronto         → Status: Pronto      ← alerta para o garçom
-5. Garçom serve o prato      → Status: Servido
-6. Pedido finalizado         → Status: Concluído   ← cobrança é gerada
+1. Garçom cria pedido        → Status: New
+2. Garçom envia para cozinha → Status: Sent
+3. Cozinha inicia preparo    → Status: Preparing  ← visível na Kitchen Queue
+4. Prato fica pronto         → Status: Ready       ← alerta para o garçom
+5. Garçom serve o prato      → Status: Served
+6. Pedido finalizado         → Status: Completed   ← cobrança é gerada
 ```
 
 ---

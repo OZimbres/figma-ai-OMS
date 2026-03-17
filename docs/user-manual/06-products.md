@@ -27,7 +27,7 @@ A tabela exibe todos os produtos cadastrados com as seguintes colunas:
 ### Exemplo de linha
 
 ```
-🍕  |  Pizza Margherita  |  Main Dishes  |  $18.00  |  15  |  ✅ Yes  |  [Edit]
+🍕  |  Margherita Pizza  |  Meals  |  $11.00  |  15  |  ✅ Yes  |  [Edit]
 ```
 
 ---
@@ -41,9 +41,9 @@ A tabela exibe todos os produtos cadastrados com as seguintes colunas:
 
 | Campo | Descrição | Exemplo |
 |-------|-----------|---------|
-| **Name** | Nome do produto | "Pizza Margherita" |
-| **Category** | Categoria no cardápio | `Main Dishes` |
-| **Price** | Preço em decimal | `18.00` |
+| **Name** | Nome do produto | "Margherita Pizza" |
+| **Category** | Categoria no cardápio | `Meals` |
+| **Price** | Preço em decimal | `11.00` |
 | **Prep Time** | Tempo de preparo (minutos) | `15` |
 | **Emoji** | Emoji representativo | `🍕` |
 | **Available** | Checkbox de disponibilidade | ✅ marcado |
@@ -68,12 +68,11 @@ A tabela exibe todos os produtos cadastrados com as seguintes colunas:
 
 | Categoria | Descrição |
 |-----------|-----------|
-| **Drinks** | Bebidas (não alcoólicas) |
-| **Alcoholic Drinks** | Bebidas alcoólicas |
-| **Starters** | Entradas / aperitivos |
-| **Main Dishes** | Pratos principais |
+| **Drinks** | Bebidas (café, sucos, água) |
+| **Pastries** | Pães e pastéis (croissants, muffins, rolls) |
+| **Sandwiches** | Sanduíches e lanches |
+| **Meals** | Pratos principais (saladas, massas, carnes, pizzas) |
 | **Desserts** | Sobremesas |
-| **Sides** | Acompanhamentos |
 
 ---
 

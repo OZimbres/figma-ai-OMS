@@ -55,22 +55,22 @@ Requisitos: **Java 21 LTS** ou superior.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  🍽  RestaurantOS                                            │
+│  Café com Prosa                                              │
 ├──────────────┬──────────────────────────────────────────────┤
-│  OPERAÇÕES   │                                              │
+│  OPERATIONS  │                                              │
 │  📊 Dashboard │         Área de Conteúdo Principal           │
-│  📋 Pedidos   │                                              │
-│  👨‍🍳 Cozinha   │   (cada item do menu lateral carrega       │
-│  🪑 Mesas     │    sua respectiva tela aqui)                 │
+│  📋 Orders   │                                              │
+│  👨‍🍳 Kitchen  │   (cada item do menu lateral carrega       │
+│  🪑 Tables   │    sua respectiva tela aqui)                 │
 ├──────────────┤                                              │
-│  GESTÃO      │                                              │
-│  🍽 Produtos  │                                              │
-│  👥 Clientes  │                                              │
-│  💰 Cobranças │                                              │
+│  MANAGEMENT  │                                              │
+│  🍽 Products │                                              │
+│  👥 Clients  │                                              │
+│  💰 Bills    │                                              │
 ├──────────────┤                                              │
 │  ADMIN       │                                              │
-│  📈 Relatórios│                                              │
-│  ⚙️ Config.   │                                              │
+│  📈 Reports  │                                              │
+│  ⚙️ Settings │                                              │
 ├──────────────┴──────────────────────────────────────────────┤
 │  👤 Admin User                                              │
 └─────────────────────────────────────────────────────────────┘

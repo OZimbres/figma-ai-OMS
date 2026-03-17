@@ -88,22 +88,22 @@ Localizada à esquerda, agrupa a navegação em três seções:
 
 ```
 ┌─────────────────────┐
-│  🍽  RestaurantOS   │
+│  Café com Prosa     │
 ├─────────────────────┤
-│  OPERAÇÕES          │
+│  OPERATIONS         │
 │  📊 Dashboard       │
-│  📋 Pedidos         │
-│  👨‍🍳 Cozinha         │
-│  🪑 Mesas           │
+│  📋 Orders          │
+│  👨‍🍳 Kitchen         │
+│  🪑 Tables          │
 ├─────────────────────┤
-│  GESTÃO             │
-│  🍽 Produtos        │
-│  👥 Clientes        │
-│  💰 Cobranças       │
+│  MANAGEMENT         │
+│  🍽 Products        │
+│  👥 Clients         │
+│  💰 Bills           │
 ├─────────────────────┤
 │  ADMIN              │
-│  📈 Relatórios      │
-│  ⚙️ Configurações   │
+│  📈 Reports         │
+│  ⚙️ Settings        │
 ├─────────────────────┤
 │  👤 Admin User      │
 └─────────────────────┘
@@ -119,10 +119,10 @@ Ocupa o restante da tela. Cada clique no menu lateral carrega a tela corresponde
 O sistema inicia com **dados de demonstração pré-carregados** para facilitar os testes:
 
 - 🪑 **10 mesas** com diferentes status
-- 📋 **8 pedidos** em vários estágios
-- 🍽️ **15 produtos** no cardápio
-- 👥 **6 clientes** cadastrados
-- 💰 **5 cobranças** (pagas e pendentes)
+- 📋 **7 pedidos** em vários estágios
+- 🍽️ **22 produtos** no cardápio
+- 👥 **10 clientes** cadastrados
+- 💰 **7 cobranças** (pagas e pendentes)
 
 Esses dados são gerados em memória ao iniciar a aplicação e são redefinidos a cada reinicialização.
 
