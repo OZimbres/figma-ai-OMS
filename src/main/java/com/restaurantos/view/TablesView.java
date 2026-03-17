@@ -55,14 +55,6 @@ public class TablesView extends HBox {
     }
 
     private VBox tableCard(RestaurantTable t) {
-        String color = switch (t.getStatus()) {
-            case FREE     -> "#10B981";
-            case OCCUPIED -> "#3B82F6";
-            case ORDERING -> "#F59E0B";
-            case WAITING  -> "#8B5CF6";
-            case PAY      -> "#EF4444";
-        };
-
         Label num = new Label("Table " + t.getNumber());
         num.getStyleClass().add("table-number");
 
@@ -90,13 +82,22 @@ public class TablesView extends HBox {
             // Toggle selection on click
             if (t.getId() != null && t.getId().equals(selectedTableId)) {
                 selectedTableId = null;
+                refreshGrid();
+                restorePlaceholder();
             } else {
                 selectedTableId = t.getId();
+                refreshGrid();
+                showTableDetail(t);
             }
-            refreshGrid();
-            showTableDetail(t);
         });
         return card;
+    }
+
+    private void restorePlaceholder() {
+        sidePanel.getChildren().clear();
+        Label sidePlaceholder = new Label("Select a table");
+        sidePlaceholder.getStyleClass().add("muted-3");
+        sidePanel.getChildren().add(sidePlaceholder);
     }
 
     private void showTableDetail(RestaurantTable t) {
