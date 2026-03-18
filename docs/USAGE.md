@@ -24,7 +24,7 @@ Quick start (Windows)
   jpackage --type exe --name restaurant-oms --input .\build\libs --main-jar restaurant-oms.jar --main-class com.restaurantos.App --dest .\build\jpackage --module-path .\build\distributions\restaurant-oms\restaurant-oms\lib --add-modules javafx.controls,javafx.fxml --win-shortcut --win-menu --verbose
 
 Main areas
-- Sidebar: navigate between Orders, Tables, Kitchen, Reports, Settings.
+- Sidebar: navigate between Dashboard, Orders, Kitchen, Tables (OPERATIONS); Products, Clients, Bills (MANAGEMENT); Reports, Settings (ADMIN).
 - Tables: click a table card to view details and change status. Selected table is highlighted.
 - Orders: create, view, change priority and status; select an order to edit items.
 - Kitchen Queue: columns for New / Preparing / Ready and move orders between states.

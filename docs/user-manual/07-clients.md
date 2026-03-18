@@ -22,7 +22,7 @@ A tela é dividida em:
 | **Phone** | Número de telefone |
 | **Email** | Endereço de e-mail |
 | **Visits** | Total de visitas ao restaurante |
-| **Tier** | Nível de fidelidade: Bronze, Silver ou Gold |
+| **Tier** | Nível de fidelidade: Bronze, Silver, Gold ou Platinum |
 | **VIP** | ⭐ VIP para clientes especiais |
 | **Spending** | Total acumulado gasto no restaurante |
 
@@ -85,17 +85,18 @@ Clique em qualquer cliente para ver suas informações completas no painel later
 
 ## Sistema de Fidelidade (Loyalty Tiers)
 
-| Tier | Ícone | Critério Típico |
-|------|-------|-----------------|
-| **Bronze** | — | Novos clientes ou poucos pedidos |
-| **Silver** | — | Frequência moderada / gastos intermediários |
-| **Gold** | — | Alta frequência e/ou alto valor acumulado |
+| Tier | Critério |
+|------|---------|
+| **Bronze** | Menos de 15 visitas |
+| **Silver** | 15 ou mais visitas |
+| **Gold** | 30 ou mais visitas |
+| **Platinum** | 50 ou mais visitas |
 
-> O tier é calculado automaticamente com base no histórico de visitas e gastos.
+> O tier é calculado automaticamente com base no número de visitas do cliente.
 
 ## Clientes VIP ⭐
 
-Clientes marcados como VIP recebem tratamento especial:
+Clientes com **30 ou mais visitas** são automaticamente marcados como VIP:
 - Badge **⭐ VIP** visível na tabela e no painel de detalhes
 - Alerta de chegada VIP nas notificações (configurável em [Settings](10-settings.md))
 

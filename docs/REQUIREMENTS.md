@@ -12,7 +12,7 @@ Packaging (Windows installer)
 
 Hardware
 - 4 GB RAM minimum; 8 GB recommended for comfortable development/testing
-- Screen: 1280x720 recommended for the UI; works on smaller screens but layout may compact
+- Screen: 1280x800 recommended for the UI; works on smaller screens but layout may compact
 
 Developer tools
 - Git 2.x

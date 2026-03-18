@@ -12,7 +12,7 @@ Empacotamento (instalador Windows)
 
 Hardware
 - RAM: mínimo 4 GB; recomendado 8 GB para desenvolvimento/testes confortáveis
-- Tela: 1280x720 recomendado para a UI; funciona em telas menores, mas o layout pode ficar mais compacto
+- Tela: 1280x800 recomendado para a UI; funciona em telas menores, mas o layout pode ficar mais compacto
 
 Ferramentas de desenvolvimento
 - Git 2.x

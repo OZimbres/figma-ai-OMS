@@ -24,7 +24,7 @@ Início rápido (Windows)
   jpackage --type exe --name restaurant-oms --input .\build\libs --main-jar restaurant-oms.jar --main-class com.restaurantos.App --dest .\build\jpackage --module-path .\build\distributions\restaurant-oms\restaurant-oms\lib --add-modules javafx.controls,javafx.fxml --win-shortcut --win-menu --verbose
 
 Principais áreas
-- Barra lateral: navegue por Pedidos, Mesas, Cozinha, Relatórios, Configurações.
+- Barra lateral: navegue por Dashboard, Pedidos, Cozinha, Mesas (OPERATIONS); Produtos, Clientes, Cobranças (MANAGEMENT); Relatórios, Configurações (ADMIN).
 - Mesas: clique em um card para ver detalhes e alterar status.
 - Pedidos: criar, visualizar, ajustar prioridade e status; selecione um pedido para editar itens.
 - Fila da Cozinha: colunas Novos / Preparando / Prontos.

@@ -74,12 +74,11 @@ Clique em qualquer cobrança para ver os detalhes e, se aplicável, processar o 
 │ Date: 15/03/2025 15:20       │
 │                              │
 │ Actions:                     │
-│ [ Pay with Cash       ]      │
-│ [ Pay with Credit Card]      │
-│ [ Pay with Debit Card ]      │
-│ [ Pay with PIX        ]      │
+│ [ Pay with Cash    ]         │
+│ [ Pay with Card    ]         │
+│ [ Pay with Digital ]         │
 │                              │
-│ [ Cancel Bill         ]      │
+│ [ Cancel Bill      ]         │
 └──────────────────────────────┘
 ```
 
@@ -96,9 +95,8 @@ Clique em qualquer cobrança para ver os detalhes e, se aplicável, processar o 
 | Botão | Método |
 |-------|--------|
 | **Pay with Cash** | Pagamento em dinheiro |
-| **Pay with Credit Card** | Cartão de crédito |
-| **Pay with Debit Card** | Cartão de débito |
-| **Pay with PIX** | Transferência PIX |
+| **Pay with Card** | Pagamento com cartão |
+| **Pay with Digital** | Pagamento digital (PIX, transferência, etc.) |
 
 3. O status da cobrança muda imediatamente para **Paid**
 4. O método de pagamento é registrado
